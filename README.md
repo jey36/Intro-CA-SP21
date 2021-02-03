@@ -4,8 +4,6 @@ Designed by [Melanie Walsh](https://melaniewalsh.org/) // Powered by [Jupyter Bo
 
 This repository hosts the course materials for the **Spring 2021** iteration of "Introduction to Cultural Analytics: Data, Computation & Culture," an undergraduate course taught at Cornell. It includes an **in-development revision** of the textbook designed for the class, *Introduction to Cultural Analytics & Python*.
 
-[![Intro Cultural Analytics home page](book/images/intro-ca-home-page-12-30-2020.png)](https://melaniewalsh.github.io/Intro-Cultural-Analytics/)
-
 Course website and textbook: https://info1350.github.io/Intro-CA-SP21/
 
 # Acknowledgments
