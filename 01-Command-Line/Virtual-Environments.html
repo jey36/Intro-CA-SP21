@@ -1,0 +1,1166 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Environments &#8212; Introduction to Cultural Analytics &amp; Python</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://melaniewalsh.github.io/Intro-Cultural-Analytics/01-Command-Line/Virtual-Environments.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://melaniewalsh.github.io/Intro-Cultural-Analytics/01-Command-Line/Virtual-Environments.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Virtual Environments" />
+<meta property="og:description" content="Virtual Environments  Create a New Environment  !conda create --name Intro-CA-Data-Collection  Conda will ask if you want to proceed. Type “y” and press enter. " />
+<meta property="og:image"       content="https://melaniewalsh.github.io/Intro-Cultural-Analytics/_static/favicon.ico" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/favicon.ico" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introduction to Cultural Analytics & Python</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  How To
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../How-To-Interact-With-This-Book.html">
+   Interact With This Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  The Course
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course-schedule-2021.html">
+   Course Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Course Syllabus
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  The Book
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Command-Line/The-Command-Line.html">
+   1. The Command Line
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Python/Python.html">
+   2. Python Basics
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Installation.html">
+     Installation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/How-to-Use-Jupyter-Notebooks.html">
+     How to Use Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Anatomy-Python-Script.html">
+     Anatomy of a Python Script
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Variables.html">
+     Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Data-Types.html">
+     Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/String-Methods.html">
+     String Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Files-Character-Encoding.html">
+     Files and Character Encoding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Comparisons-Conditionals.html">
+     Comparisons &amp; Conditionals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Lists-Loops-Part1.html">
+     Lists &amp; Loops — Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Lists-Loops-Part2.html">
+     Lists &amp; Loops — Part 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Functions.html">
+     Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Common-Python-Errors.html">
+     Common Python Errors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/What-Were-Not-Covering.html">
+     What We’re Not Covering
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Data-Analysis/Data-Analysis.html">
+   3. Data Analysis (Pandas)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Data-Analysis/Pandas-Basics-Part1.html">
+     Pandas Basics — Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Data-Analysis/Pandas-Basics-Part2.html">
+     Pandas Basics — Part 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Data-Analysis/Pandas-Basics-Part3.html">
+     Pandas Basics — Part 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Data-Analysis/Pandas-Merge-Datasets.html">
+     Pandas — Merge Datasets
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Data-Collection/Data-Collection.html">
+   4. Data Collection (Web Scraping, APIs)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Data-Collection/User-Ethics-Legal-Concerns.html">
+     User Ethics &amp; Legal Concerns
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Data-Collection/Web-Scraping-Part1.html">
+     Web Scraping — Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Data-Collection/Web-Scraping-Part2.html">
+     Web Scraping — Part 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Data-Collection/Git-GitHub.html">
+     Git and GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Data-Collection/APIs.html">
+     Application Programming Interfaces (APIs)
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Data-Collection/Song-Genius-Data-Collection.html">
+     Song Genius Data Collection
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Data-Collection/Genius-API.html">
+       Song Genius API
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Data-Collection/LyricsGenius.html">
+       Song Lyrics Collection
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Data-Collection/Song-Lyrics-Analysis.html">
+       Song Lyrics Analysis
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Data-Collection/Twitter-Data-Collection-Home.html">
+     Twitter Data Collection
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Data-Collection/Twitter-API-Setup.html">
+       Twitter API Setup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Data-Collection/Twitter-Data-Collection.html">
+       Twitter Data Collection
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Data-Collection/Twitter-Data-Analysis.html">
+       Twitter Data Analysis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Data-Collection/Twitter-Data-Sharing.html">
+       Twitter Data Sharing
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Data-Collection/Reddit-Data-Collection-With-PSAW.html">
+     Reddit Data Collection
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Text-Analysis/Text-Analysis.html">
+   5. Text Analysis
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Text-Analysis/TF-IDF.html">
+     TF-IDF
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Text-Analysis/TF-IDF-HathiTrust.html">
+       TF-IDF with HathiTrust Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Text-Analysis/TF-IDF-Scikit-Learn.html">
+       TF-IDF with Scikit-Learn
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Text-Analysis/Topic-Modeling.html">
+     Topic Modeling
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Text-Analysis/Topic-Modeling-Overview.html">
+       Topic Modeling — Overview
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Text-Analysis/Topic-Modeling-Set-Up.html">
+       Topic Modeling — Set Up
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Text-Analysis/Topic-Modeling-Text-Files.html">
+       Topic Modeling — Text Files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Text-Analysis/Topic-Modeling-CSV.html">
+       Topic Modeling — CSV Files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Text-Analysis/Topic-Modeling-Time-Series.html">
+       Topic Modeling — Time Series
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Text-Analysis/Named-Entity-Recognition.html">
+     Named Entity Recognition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Text-Analysis/POS-Keywords.html">
+     Part-of-Speech Tagging
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Text-Analysis/POS-Keywords.html#keyword-extraction">
+     Keyword Extraction
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Network-Analysis/Network-Analysis-Home.html">
+   6. Network Analysis
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Network-Analysis/Network-Analysis.html">
+     Network Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Network-Analysis/Making-Network-Viz-with-Bokeh.html">
+     Make an Interactive Network Visualization
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Mapping/Mapping-Home.html">
+   7. Mapping
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Mapping/Mapping.html">
+     Mapping
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Mapping/Mapping.html#geocoding-with-geopy">
+     Geocoding with GeoPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Mapping/Mapping.html#making-interactive-maps">
+     Making Interactive Maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Mapping/Custom-Maps.html">
+     Custom Map Backgrounds
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Mapping/Publish-Your-Map.html">
+     Publish Your Map on the Web
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Datasets
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Datasets/Datasets.html">
+   Datasets
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Extra Materials
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Python/Jupyter-Tips-Tricks.html">
+   Jupyter Tips &amp; Tricks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Python/Randomize-Students.html">
+   Make Random Student Groups
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/01-Command-Line/Virtual-Environments.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/melaniewalsh/Intro-Cultural-Analytics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/melaniewalsh/Intro-Cultural-Analytics/issues/new?title=Issue%20on%20page%20%2F01-Command-Line/Virtual-Environments.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/melaniewalsh/Intro-Cultural-Analytics/master?urlpath=lab/tree/book/01-Command-Line/Virtual-Environments.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-new-environment">
+   Create a New Environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#activate-environment">
+   Activate Environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-packages">
+   Install Packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-virutal-environment-to-jupyter-notbeook-lab">
+   Add Virutal Environment to Jupyter Notbeook/Lab
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#remove-delete-virtual-environment">
+   Remove/Delete Virtual Environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#remove-virtual-environment-from-jupyter-notebook-lab">
+   Remove Virtual Environment from Jupyter Notebook/Lab
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-which-environments-are-available">
+   Check Which Environments Are Available
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#switch-back-to-default-base-environment">
+   Switch Back to Default (base) Environment
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="virtual-environments">
+<h1>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="create-a-new-environment">
+<h2>Create a New Environment<a class="headerlink" href="#create-a-new-environment" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>conda create --name Intro-CA-Data-Collection
+</pre></div>
+</div>
+</div>
+</div>
+<p>Conda will ask if you want to proceed. Type “y” and press enter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Proceed ([y]/n)? y
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="activate-environment">
+<h2>Activate Environment<a class="headerlink" href="#activate-environment" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>conda activate Intro-CA-Data-Collection
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="install-packages">
+<h2>Install Packages<a class="headerlink" href="#install-packages" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>conda install beautifulsoup4
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting package metadata (current_repodata.json): done
+Solving environment: - 
+The environment is inconsistent, please check the package plan carefully
+The following packages are causing the inconsistency:
+\ 
+  - conda-forge/osx-64::certifi==2020.12.5=py37hf985489_1
+  - conda-forge/osx-64::pango==1.42.4=haa940fe_4
+  - conda-forge/noarch::pygments==2.6.1=py_0
+  - conda-forge/noarch::tqdm==4.46.0=pyh9f0ad1d_0
+  - conda-forge/osx-64::r-purrr==0.3.4=r36h17f1fa6_1
+  - conda-forge/noarch::r-r2d3==0.2.3=r36h6115d3f_1002
+  - conda-forge/osx-64::notebook==6.0.3=py37_0
+  - conda-forge/noarch::r-magrittr==1.5=r36h6115d3f_1003
+  - conda-forge/noarch::r-forcats==0.5.0=r36h6115d3f_1
+  - conda-forge/noarch::r-shiny==1.5.0=r36h6115d3f_0
+  - conda-forge/osx-64::chardet==3.0.4=py37hc8dfbb8_1006
+  - conda-forge/noarch::markdown==3.2.1=py_0
+  - conda-forge/osx-64::r-readxl==1.3.1=r36hee97c7f_4
+  - conda-forge/noarch::r-knitr==1.29=r36h6115d3f_0
+  - conda-forge/osx-64::kiwisolver==1.2.0=py37ha1cc60f_0
+  - conda-forge/noarch::r-r6==2.4.1=r36h6115d3f_1
+  - conda-forge/noarch::r-packrat==0.5.0=r36h6115d3f_1002
+  - conda-forge/noarch::r-cellranger==1.1.0=r36h6115d3f_1003
+  - conda-forge/noarch::olefile==0.46=py_0
+  - conda-forge/noarch::anaconda-client==1.7.2=py_0
+  - conda-forge/noarch::r-highr==0.8=r36h6115d3f_2
+  - conda-forge/osx-64::harfbuzz==2.4.0=hd8d2a14_3
+  - conda-forge/noarch::panel==0.8.1=pyh9f0ad1d_1
+  - conda-forge/osx-64::widgetsnbextension==3.5.1=py37_0
+  - conda-forge/osx-64::py-lief==0.9.0=py37h0ceac7d_1
+  - conda-forge/noarch::backports.functools_lru_cache==1.6.1=py_0
+  - conda-forge/osx-64::r-readr==1.3.1=r36hc5da6b9_1004
+  - conda-forge/noarch::r-htmlwidgets==1.5.1=r36h6115d3f_1
+  - conda-forge/noarch::r-rprojroot==1.3_2=r36h6115d3f_1003
+  - conda-forge/noarch::r-tinytex==0.24=r36h6115d3f_0
+  - conda-forge/osx-64::r-stringi==1.4.6=r36h3211bb2_2
+  - conda-forge/noarch::r-miniui==0.1.1.1=r36h6115d3f_1002
+  - conda-forge/noarch::r-xtable==1.8_4=r36h6115d3f_3
+  - conda-forge/osx-64::r-promises==1.1.1=r36hc5da6b9_0
+  - conda-forge/osx-64::terminado==0.8.3=py37hc8dfbb8_1
+  - conda-forge/noarch::glob2==0.7=py_0
+  - conda-forge/osx-64::r-jsonlite==1.7.0=r36h17f1fa6_0
+  - conda-forge/osx-64::dbus==1.13.6=h2f22bb5_0
+  - conda-forge/osx-64::r-tidyr==1.1.0=r36hc5da6b9_0
+  - defaults/osx-64::rstudio==1.1.456=h04f5b5a_1
+  - conda-forge/osx-64::r-bitops==1.0_6=r36h17f1fa6_1004
+  - conda-forge/osx-64::r-curl==4.3=r36h17f1fa6_1
+  - conda-forge/noarch::param==1.9.3=py_0
+  - conda-forge/osx-64::pillow==7.1.2=py37hfd78ece_0
+  - conda-forge/noarch::prometheus_client==0.7.1=py_0
+  - conda-forge/osx-64::pyzmq==19.0.0=py37haec44b1_1
+  - conda-forge/osx-64::r-htmltools==0.5.0=r36hc5da6b9_0
+  - conda-forge/noarch::r-config==0.3=r36h6115d3f_1003
+  - conda-forge/noarch::r-globals==0.12.5=r36h6115d3f_1
+  - conda-forge/osx-64::jsonschema==3.2.0=py37hc8dfbb8_1
+  - conda-forge/osx-64::r-commonmark==1.7=r36h17f1fa6_1002
+  - conda-forge/osx-64::r-tidyselect==1.1.0=r36h6115d3f_0
+  - conda-forge/osx-64::r-odbc==1.2.3=r36hc5da6b9_0
+  - conda-forge/noarch::ipywidgets==7.5.1=py_0
+  - conda-forge/noarch::decorator==4.4.2=py_0
+  - conda-forge/osx-64::r-markdown==1.1=r36h17f1fa6_1
+  - conda-forge/noarch::backports.tempfile==1.0=py_0
+  - conda-forge/noarch::r-blob==1.2.1=r36h6115d3f_1
+  - conda-forge/osx-64::cairo==1.16.0=hec6a9b0_1003
+  - conda-forge/osx-64::r-rcurl==1.98_1.2=r36h17f1fa6_1
+  - conda-forge/osx-64::pysocks==1.7.1=py37hc8dfbb8_1
+  - conda-forge/osx-64::r-utf8==1.1.4=r36h17f1fa6_1003
+  - conda-forge/noarch::backports==1.0=py_2
+  - conda-forge/osx-64::r-rjson==0.2.20=r36hc5da6b9_1002
+  - conda-forge/osx-64::glib==2.64.2=h577aef8_0
+  - conda-forge/noarch::r-assertthat==0.2.1=r36h6115d3f_2
+  - conda-forge/osx-64::cffi==1.14.0=py37h356ff06_0
+  - conda-forge/noarch::webencodings==0.5.1=py_1
+  - conda-forge/noarch::pandocfilters==1.4.2=py_1
+  - conda-forge/noarch::importlib_metadata==1.6.0=0
+  - conda-forge/osx-64::r-glue==1.4.1=r36h17f1fa6_0
+  - conda-forge/osx-64::brotlipy==0.7.0=py37h9bfed18_1000
+  - conda-forge/osx-64::r-askpass==1.1=r36h17f1fa6_2
+  - conda-forge/noarch::r-hms==0.5.3=r36h6115d3f_1
+  - conda-forge/noarch::testpath==0.4.4=py_0
+  - conda-forge/osx-64::r-dplyr==1.0.0=r36hc5da6b9_0
+  - conda-forge/osx-64::r-mongolite==2.2.0=r36h17f1fa6_1
+  - conda-forge/osx-64::r-haven==2.3.1=r36hee97c7f_0
+  - defaults/osx-64::anaconda-navigator==1.9.12=py37_0
+  - conda-forge/noarch::r-rmarkdown==2.3=r36h6115d3f_0
+  - conda-forge/osx-64::matplotlib==3.2.1=0
+  - conda-forge/noarch::filelock==3.0.10=py_0
+  - pyviz/noarch::holoviews==1.13.2=py_0
+  - conda-forge/noarch::r-rstudioapi==0.11=r36h6115d3f_1
+  - conda-forge/osx-64::r-backports==1.1.8=r36h17f1fa6_0
+  - conda-forge/noarch::jupyterlab==2.2.9=pyhd8ed1ab_0
+  - conda-forge/osx-64::ipykernel==5.2.1=py37h43977f1_0
+  - conda-forge/noarch::click==7.1.2=pyh9f0ad1d_0
+  - conda-forge/noarch::r-rematch==1.0.1=r36h6115d3f_1003
+  - conda-forge/osx-64::matplotlib-base==3.2.1=py37hddda452_0
+  - conda-forge/osx-64::r-rjava==0.9_13=r36h17f1fa6_3
+  - conda-forge/noarch::pycparser==2.20=py_0
+  - conda-forge/osx-64::r-xfun==0.15=r36h17f1fa6_1
+  - conda-forge/noarch::r-pkgconfig==2.0.3=r36h6115d3f_1
+  - defaults/osx-64::python.app==2=py37_10
+  - conda-forge/noarch::r-withr==2.2.0=r36h6115d3f_1
+  - conda-forge/osx-64::pexpect==4.8.0=py37hc8dfbb8_1
+  - conda-forge/osx-64::nbconvert==5.6.1=py37hc8dfbb8_1
+  - conda-forge/osx-64::r-vctrs==0.3.2=r36h800e0f2_0
+  - conda-forge/osx-64::r-xml2==1.3.2=r36hc5da6b9_1
+  - conda-forge/osx-64::pyqt==5.9.2=py37h2a560b1_4
+  - conda-forge/noarch::pyparsing==2.4.7=pyh9f0ad1d_0
+  - conda-forge/noarch::urllib3==1.25.9=py_0
+  - conda-forge/noarch::r-rjdbc==0.2_8=r36h6115d3f_1
+  - conda-forge/noarch::defusedxml==0.6.0=py_0
+  - conda-forge/osx-64::future==0.18.2=py37hc8dfbb8_1
+  - conda-forge/noarch::pyct-core==0.4.6=py_0
+  - conda-forge/noarch::r-evaluate==0.14=r36h6115d3f_2
+  - defaults/osx-64::conda-build==3.18.11=py37_0
+  - defaults/noarch::conda-verify==3.4.2=py_1
+  - conda-forge/osx-64::markupsafe==1.1.1=py37h9bfed18_1
+  - conda-forge/osx-64::r-rappdirs==0.3.1=r36h17f1fa6_1004
+  - conda-forge/osx-64::r-sys==3.3=r36h17f1fa6_1
+  - conda-forge/noarch::r-sparklyr==1.3.1=r36h6115d3f_0
+  - conda-forge/osx-64::pandas==1.0.3=py37h94625e5_1
+  - conda-forge/noarch::pyopenssl==19.1.0=py_1
+  - conda-forge/osx-64::pyrsistent==0.16.0=py37h9bfed18_0
+  - conda-forge/noarch::r-dbi==1.1.0=r36h6115d3f_1
+  - conda-forge/noarch::jupyter_client==6.1.3=py_0
+  - conda-forge/osx-64::r-mime==0.9=r36h17f1fa6_1
+  - conda-forge/osx-64::r-catools==1.18.0=r36hc5da6b9_1
+  - conda-forge/noarch::send2trash==1.5.0=py_0
+  - conda-forge/osx-64::r-base64enc==0.1_3=r36h17f1fa6_1004
+  - conda-forge/noarch::packaging==20.1=py_0
+  - conda-forge/osx-64::r-bit==1.1_15.2=r36h17f1fa6_1
+  - conda-forge/osx-64::jupyter_core==4.6.3=py37hc8dfbb8_1
+  - conda-forge/noarch::pytz==2020.1=pyh9f0ad1d_0
+  - conda-forge/osx-64::r-openssl==1.4.2=r36h9d0ceee_0
+  - conda-forge/noarch::attrs==19.3.0=py_0
+  - conda-forge/osx-64::conda==4.9.2=py37hf985489_0
+  - conda-forge/noarch::r-dbplyr==1.4.4=r36h6115d3f_0
+  - conda-forge/osx-64::mistune==0.8.4=py37h9bfed18_1001
+  - conda-forge/osx-64::jedi==0.17.0=py37hc8dfbb8_0
+  - conda-forge/osx-64::r-httpuv==1.5.4=r36hc5da6b9_0
+  - conda-forge/osx-64::pycosat==0.6.3=py37h9bfed18_1004
+  - conda-forge/noarch::r-crayon==1.3.4=r36h6115d3f_1003
+  - conda-forge/osx-64::r-fastmap==1.0.1=r36hc5da6b9_1
+  - conda-forge/osx-64::r-profvis==0.3.6=r36h17f1fa6_2
+  - conda-forge/noarch::r-clipr==0.7.0=r36h6115d3f_1
+  - conda-forge/osx-64::r-rjsonio==1.3_1.4=r36hc5da6b9_1
+  - conda-forge/osx-64::python_abi==3.7=1_cp37m
+  - conda-forge/osx-64::entrypoints==0.3=py37hc8dfbb8_1001
+  - conda-forge/noarch::r-progress==1.2.2=r36h6115d3f_2
+  - conda-forge/osx-64::psutil==5.7.0=py37h9bfed18_1
+  - conda-forge/osx-64::ipython==7.14.0=py37hc8dfbb8_0
+  - conda-forge/noarch::idna==2.9=py_1
+  - conda-forge/noarch::pip==20.1=pyh9f0ad1d_0
+  - conda-forge/noarch::pyct==0.4.6=py_0
+  - conda-forge/noarch::r-generics==0.0.2=r36h6115d3f_1003
+  - conda-forge/osx-64::soupsieve==1.9.4=py37hc8dfbb8_1
+  - conda-forge/osx-64::pyyaml==5.3.1=py37h9bfed18_0
+  - conda-forge/noarch::json5==0.9.0=py_0
+  - conda-forge/noarch::backcall==0.1.0=py_0
+  - conda-forge/noarch::pyviz_comms==0.7.4=pyh8c360ce_0
+  - conda-forge/osx-64::r-uuid==0.1_4=r36h17f1fa6_1
+  - conda-forge/noarch::r-codetools==0.2_16=r36h6115d3f_1002
+  - conda-forge/osx-64::r-tibble==3.0.3=r36h17f1fa6_0
+  - conda-forge/noarch::cycler==0.10.0=py_2
+  - conda-forge/noarch::wheel==0.34.2=py_1
+  - conda-forge/noarch::jinja2==2.11.2=pyh9f0ad1d_0
+  - conda-forge/noarch::xmltodict==0.12.0=py_0
+  - conda-forge/noarch::parso==0.7.0=pyh9f0ad1d_0
+  - conda-forge/noarch::clyent==1.2.2=py_1
+  - conda-forge/noarch::nbformat==5.0.6=py_0
+  - conda-forge/noarch::pkginfo==1.5.0.1=py_0
+  - conda-forge/noarch::r-prettyunits==1.1.1=r36h6115d3f_1
+  - defaults/osx-64::_ipyw_jlab_nb_ext_conf==0.1.0=py37_0
+  - conda-forge/osx-64::ruamel_yaml==0.15.80=py37h9bfed18_1001
+  - conda-forge/noarch::requests==2.23.0=pyh8c360ce_2
+  - conda-forge/noarch::bleach==3.1.5=pyh9f0ad1d_0
+  - conda-forge/osx-64::r-yaml==2.2.1=r36h17f1fa6_1
+  - conda-forge/noarch::zipp==3.1.0=py_0
+  - conda-forge/osx-64::cryptography==2.9.2=py37he655712_0
+  - conda-forge/noarch::r-rsconnect==0.8.16=r36h6115d3f_1
+  - conda-forge/osx-64::r-sourcetools==0.1.7=r36h4a8c4bd_1002
+  - conda-forge/noarch::r-forge==0.2.0=r36h6115d3f_3
+  - conda-forge/noarch::r-cli==2.0.2=r36h6115d3f_1
+  - conda-forge/osx-64::r-pki==0.1_7=r36h17f1fa6_1
+  - conda-forge/osx-64::r-bit64==0.9_7.1=r36h800e0f2_0
+  - conda-forge/osx-64::r-rlang==0.4.7=r36h17f1fa6_0
+  - conda-forge/noarch::r-httr==1.4.1=r36h6115d3f_2
+  - conda-forge/noarch::r-zeallot==0.1.0=r36h6115d3f_1002
+  - conda-forge/osx-64::r-fansi==0.4.1=r36h17f1fa6_1
+  - conda-forge/osx-64::r-rcpp==1.0.5=r36hc5da6b9_0
+  - conda-forge/noarch::ptyprocess==0.6.0=py_1001
+  - conda-forge/osx-64::pickleshare==0.7.5=py37hc8dfbb8_1001
+  - conda-forge/osx-64::r-digest==0.6.25=r36hc5da6b9_2
+  - conda-forge/noarch::r-lifecycle==0.2.0=r36h6115d3f_1
+  - conda-forge/noarch::ipython_genutils==0.2.0=py_1
+  - conda-forge/osx-64::appnope==0.1.0=py37hc8dfbb8_1001
+  - conda-forge/osx-64::r-base==3.6.3=h0dd4800_2
+  - conda-forge/osx-64::r-later==1.1.0.1=r36hc5da6b9_0
+  - conda-forge/osx-64::python==3.7.6=cpython_h1fd5dd1_6
+  - conda-forge/noarch::r-pillar==1.4.6=r36h6115d3f_0
+  - conda-forge/osx-64::sip==4.19.8=py37h0a44026_1000
+  - conda-forge/noarch::six==1.14.0=py_1
+  - conda-forge/osx-64::python-libarchive-c==2.9=py37_0
+  - conda-forge/osx-64::backports.weakref==1.0.post1=py37hc8dfbb8_1001
+  - conda-forge/noarch::wcwidth==0.1.9=pyh9f0ad1d_0
+  - conda-forge/noarch::python-dateutil==2.8.1=py_0
+  - conda-forge/noarch::prompt-toolkit==3.0.5=py_0
+  - conda-forge/osx-64::r-ellipsis==0.3.1=r36h17f1fa6_0
+  - conda-forge/osx-64::importlib-metadata==1.6.0=py37hc8dfbb8_0
+  - conda-forge/osx-64::traitlets==4.3.3=py37hc8dfbb8_1
+  - conda-forge/osx-64::conda-package-handling==1.6.0=py37h9bfed18_2
+  - conda-forge/noarch::qtpy==1.9.0=py_0
+  - defaults/osx-64::navigator-updater==0.2.1=py37_0
+  - conda-forge/noarch::r-stringr==1.4.0=r36h6115d3f_2
+done
+
+## Package Plan ##
+
+  environment location: /Users/melaniewalsh/opt/anaconda3
+
+  added / updated specs:
+    - spacy
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    aiohttp-3.7.3              |   py37hf967b71_1         588 KB  conda-forge
+    async-timeout-3.0.1        |          py_1000          11 KB  conda-forge
+    bokeh-1.4.0                |   py37hc8dfbb8_1        13.6 MB  conda-forge
+    boto-2.49.0                |             py_0         838 KB  conda-forge
+    boto3-1.17.1               |     pyhd8ed1ab_0          70 KB  conda-forge
+    botocore-1.20.1            |     pyhd8ed1ab_0         4.5 MB  conda-forge
+    bz2file-0.98               |             py_0           9 KB  conda-forge
+    c-ares-1.17.1              |       hc929b4f_0          95 KB  conda-forge
+    cachetools-4.2.1           |     pyhd8ed1ab_0          13 KB  conda-forge
+    catalogue-2.0.1            |   py37hf985489_2          17 KB  conda-forge
+    colorama-0.4.4             |     pyh9f0ad1d_0          18 KB  conda-forge
+    cymem-2.0.5                |   py37h9af6487_1          33 KB  conda-forge
+    cython-blis-0.7.4          |   py37h183f225_0         5.1 MB  conda-forge
+    dataclasses-0.7            |     pyhb2cacf7_7           7 KB  conda-forge
+    google-api-core-1.25.1     |     pyh44b312d_0          58 KB  conda-forge
+    google-auth-1.24.0         |     pyhd3deb0d_0          62 KB  conda-forge
+    google-cloud-core-1.5.0    |     pyhd3deb0d_0          26 KB  conda-forge
+    google-cloud-storage-1.19.0|             py_0          51 KB  conda-forge
+    google-crc32c-1.1.2        |   py37ha9cd34e_0          23 KB  conda-forge
+    google-resumable-media-1.2.0|     pyhd3deb0d_0          40 KB  conda-forge
+    googleapis-common-protos-1.52.0|   py37hf985489_1          69 KB  conda-forge
+    grpcio-1.35.0              |   py37ha21bcd6_0         1.7 MB  conda-forge
+    jmespath-0.10.0            |     pyh9f0ad1d_0          21 KB  conda-forge
+    jupyterlab_server-1.2.0    |             py_0          25 KB
+    libcrc32c-1.1.1            |       h1c7c35f_2          20 KB  conda-forge
+    libprotobuf-3.14.0         |       hfd3ada9_0         2.2 MB  conda-forge
+    multidict-5.1.0            |   py37hf967b71_1          60 KB  conda-forge
+    murmurhash-1.0.5           |   py37h9af6487_0          22 KB  conda-forge
+    numpy-1.20.0               |   py37ha9839cc_0         5.4 MB  conda-forge
+    pathy-0.3.5                |     pyhd8ed1ab_0          32 KB  conda-forge
+    preshed-3.0.5              |   py37h9af6487_0          84 KB  conda-forge
+    protobuf-3.14.0            |   py37h54c7649_1         326 KB  conda-forge
+    pydantic-1.7.3             |   py37h7585375_0         1.8 MB  conda-forge
+    rsa-4.7                    |     pyhd3deb0d_0          27 KB  conda-forge
+    s3transfer-0.3.4           |     pyhd8ed1ab_0          51 KB  conda-forge
+    setuptools-49.6.0          |   py37hf985489_3         934 KB  conda-forge
+    shellingham-1.4.0          |     pyh44b312d_0          11 KB  conda-forge
+    smart_open-2.2.1           |     pyh9f0ad1d_0          78 KB  conda-forge
+    spacy-3.0.1                |   py37h78abdbc_1         9.2 MB  conda-forge
+    spacy-legacy-3.0.1         |     pyhd8ed1ab_0          10 KB  conda-forge
+    srsly-2.4.0                |   py37h9af6487_2         511 KB  conda-forge
+    thinc-8.0.1                |   py37h78abdbc_1         964 KB  conda-forge
+    tornado-6.1                |   py37hf967b71_1         641 KB  conda-forge
+    typer-0.3.2                |     pyhd8ed1ab_0          23 KB  conda-forge
+    typing-extensions-3.7.4.3  |                0           8 KB  conda-forge
+    typing_extensions-3.7.4.3  |             py_0          25 KB  conda-forge
+    wasabi-0.8.2               |     pyh44b312d_0          23 KB  conda-forge
+    yarl-1.6.3                 |   py37hf967b71_1         131 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        49.4 MB
+
+The following NEW packages will be INSTALLED:
+
+  aiohttp            conda-forge/osx-64::aiohttp-3.7.3-py37hf967b71_1
+  async-timeout      conda-forge/noarch::async-timeout-3.0.1-py_1000
+  beautifulsoup4     conda-forge/noarch::beautifulsoup4-4.9.3-pyhb0f4dca_0
+  bokeh              conda-forge/osx-64::bokeh-1.4.0-py37hc8dfbb8_1
+  boto               conda-forge/noarch::boto-2.49.0-py_0
+  boto3              conda-forge/noarch::boto3-1.17.1-pyhd8ed1ab_0
+  botocore           conda-forge/noarch::botocore-1.20.1-pyhd8ed1ab_0
+  bz2file            conda-forge/noarch::bz2file-0.98-py_0
+  c-ares             conda-forge/osx-64::c-ares-1.17.1-hc929b4f_0
+  cachetools         conda-forge/noarch::cachetools-4.2.1-pyhd8ed1ab_0
+  catalogue          conda-forge/osx-64::catalogue-2.0.1-py37hf985489_2
+  colorama           conda-forge/noarch::colorama-0.4.4-pyh9f0ad1d_0
+  cymem              conda-forge/osx-64::cymem-2.0.5-py37h9af6487_1
+  cython-blis        conda-forge/osx-64::cython-blis-0.7.4-py37h183f225_0
+  dataclasses        conda-forge/noarch::dataclasses-0.7-pyhb2cacf7_7
+  google-api-core    conda-forge/noarch::google-api-core-1.25.1-pyh44b312d_0
+  google-auth        conda-forge/noarch::google-auth-1.24.0-pyhd3deb0d_0
+  google-cloud-core  conda-forge/noarch::google-cloud-core-1.5.0-pyhd3deb0d_0
+  google-cloud-stor~ conda-forge/noarch::google-cloud-storage-1.19.0-py_0
+  google-crc32c      conda-forge/osx-64::google-crc32c-1.1.2-py37ha9cd34e_0
+  google-resumable-~ conda-forge/noarch::google-resumable-media-1.2.0-pyhd3deb0d_0
+  googleapis-common~ conda-forge/osx-64::googleapis-common-protos-1.52.0-py37hf985489_1
+  grpcio             conda-forge/osx-64::grpcio-1.35.0-py37ha21bcd6_0
+  jmespath           conda-forge/noarch::jmespath-0.10.0-pyh9f0ad1d_0
+  jupyterlab_server  pkgs/main/noarch::jupyterlab_server-1.2.0-py_0
+  libcrc32c          conda-forge/osx-64::libcrc32c-1.1.1-h1c7c35f_2
+  libprotobuf        conda-forge/osx-64::libprotobuf-3.14.0-hfd3ada9_0
+  multidict          conda-forge/osx-64::multidict-5.1.0-py37hf967b71_1
+  murmurhash         conda-forge/osx-64::murmurhash-1.0.5-py37h9af6487_0
+  numpy              conda-forge/osx-64::numpy-1.20.0-py37ha9839cc_0
+  pathy              conda-forge/noarch::pathy-0.3.5-pyhd8ed1ab_0
+  preshed            conda-forge/osx-64::preshed-3.0.5-py37h9af6487_0
+  protobuf           conda-forge/osx-64::protobuf-3.14.0-py37h54c7649_1
+  pyasn1             conda-forge/noarch::pyasn1-0.4.8-py_0
+  pyasn1-modules     conda-forge/noarch::pyasn1-modules-0.2.7-py_0
+  pydantic           conda-forge/osx-64::pydantic-1.7.3-py37h7585375_0
+  rsa                conda-forge/noarch::rsa-4.7-pyhd3deb0d_0
+  s3transfer         conda-forge/noarch::s3transfer-0.3.4-pyhd8ed1ab_0
+  setuptools         conda-forge/osx-64::setuptools-49.6.0-py37hf985489_3
+  shellingham        conda-forge/noarch::shellingham-1.4.0-pyh44b312d_0
+  smart_open         conda-forge/noarch::smart_open-2.2.1-pyh9f0ad1d_0
+  spacy              conda-forge/osx-64::spacy-3.0.1-py37h78abdbc_1
+  spacy-legacy       conda-forge/noarch::spacy-legacy-3.0.1-pyhd8ed1ab_0
+  srsly              conda-forge/osx-64::srsly-2.4.0-py37h9af6487_2
+  thinc              conda-forge/osx-64::thinc-8.0.1-py37h78abdbc_1
+  tornado            conda-forge/osx-64::tornado-6.1-py37hf967b71_1
+  typer              conda-forge/noarch::typer-0.3.2-pyhd8ed1ab_0
+  typing-extensions  conda-forge/noarch::typing-extensions-3.7.4.3-0
+  typing_extensions  conda-forge/noarch::typing_extensions-3.7.4.3-py_0
+  wasabi             conda-forge/noarch::wasabi-0.8.2-pyh44b312d_0
+  yarl               conda-forge/osx-64::yarl-1.6.3-py37hf967b71_1
+
+The following packages will be UPDATED:
+
+  libcxx                                  10.0.0-h1af66ff_2 --&gt; 11.0.1-habf9029_0
+
+
+Proceed ([y]/n)? ^C
+
+CondaSystemExit: 
+Operation aborted.  Exiting.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-virutal-environment-to-jupyter-notbeook-lab">
+<h2>Add Virutal Environment to Jupyter Notbeook/Lab<a class="headerlink" href="#add-virutal-environment-to-jupyter-notbeook-lab" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install --user ipykernel
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python -m ipykernel install --user --name<span class="o">=</span>Intro-CA-Data-Collection
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="remove-delete-virtual-environment">
+<h2>Remove/Delete Virtual Environment<a class="headerlink" href="#remove-delete-virtual-environment" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>conda env remove --name Intro-CA-Data-Collection
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="remove-virtual-environment-from-jupyter-notebook-lab">
+<h2>Remove Virtual Environment from Jupyter Notebook/Lab<a class="headerlink" href="#remove-virtual-environment-from-jupyter-notebook-lab" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>jupyter kernelspec uninstall Intro-CA-Data-Collection
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="check-which-environments-are-available">
+<h2>Check Which Environments Are Available<a class="headerlink" href="#check-which-environments-are-available" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>conda info --envs
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="switch-back-to-default-base-environment">
+<h2>Switch Back to Default (base) Environment<a class="headerlink" href="#switch-back-to-default-base-environment" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>conda activate
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "intro-ca-data-collection"
+        },
+        kernelOptions: {
+            kernelName: "intro-ca-data-collection",
+            path: "./01-Command-Line"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'intro-ca-data-collection'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By <a href="https://melaniewalsh.org/">Melanie Walsh</a><br/>
+        
+            &copy; Copyright 2021.<br/>
+          <div class="extra_footer">
+            <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>. The code is licensed under a <a href="https://choosealicense.com/licenses/gpl-3.0/#">GNU General Public License v3.0</a>.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-86905362-3', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
