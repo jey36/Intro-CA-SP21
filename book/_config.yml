@@ -27,7 +27,18 @@ execute:
 #######################################################################################
 # Parse and render settings
 parse:
-  myst_extended_syntax      : true  # enable MyST extended syntax support (see documents for details)
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - html_admonition
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_image
+    - replacements
+    - smartquotes
+    - substitution
   myst_url_schemes          : [mailto, http, https]  # URI schemes that will be recognised as external URLs in Markdown links
 
 #######################################################################################
@@ -88,8 +99,10 @@ sphinx:
       - replacements
       - smartquotes
       - substitution
-    #redirects:
+    redirects:
       #"features/*": "https://melaniewalsh.github.io/Intro-Cultural-Analytics/$source.html"
+      "Command-Line/*": "01-$source"
+      ""
       notfound_context:
          body: "<h1>Page not found.</h1>\n\nSorry, this page cannot be found. Try the <a href='index.html'> home page </a> or <a href='search.html'> search page </a> to find what you're looking for.</p>."
       notfound_no_urls_prefix: True
