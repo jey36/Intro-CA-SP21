@@ -71,7 +71,7 @@
 <meta property="og:url"         content="https://melaniewalsh.github.io/Intro-Cultural-Analytics/02-Python/07-Files-Character-Encoding.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Files &amp; Character Encoding" />
-<meta property="og:description" content="Files &amp; Character Encoding  Open a Text File  If you want to read or write a text file with Python, it is necessary to first open the file. To open a file, you " />
+<meta property="og:description" content="Files &amp; Character Encoding  Note: You can explore the associated workbook for this chapter in the cloud.  Open a Text File  If you want to read or write a text " />
 <meta property="og:image"       content="https://melaniewalsh.github.io/Intro-Cultural-Analytics/_static/favicon.ico" />
 
 <meta name="twitter:card" content="summary" />
@@ -616,6 +616,7 @@
                 
   <div class="section" id="files-character-encoding">
 <h1>Files &amp; Character Encoding<a class="headerlink" href="#files-character-encoding" title="Permalink to this headline">¶</a></h1>
+<p><em>Note: You can explore the <a class="reference external" href="https://mybinder.org/v2/gh/INFO1350/Intro-CA-SP21/master?urlpath=lab/tree/book/02-Python/07.5-Files-Character-Encoding-WORKBOOK.ipynb">associated workbook</a> for this chapter in the cloud.</em></p>
 <div class="section" id="open-a-text-file">
 <h2>Open a Text File<a class="headerlink" href="#open-a-text-file" title="Permalink to this headline">¶</a></h2>
 <p>If you want to read or write a text file with Python, it is necessary to first open the file. To open a file, you can use Python’s built-in <code class="docutils literal notranslate"><span class="pre">open()</span></code> function.</p>
@@ -638,7 +639,7 @@
 <p>A file object does not contain readable text. To read this file object as text, you need to use the <code class="docutils literal notranslate"><span class="pre">.read()</span></code> method.</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample-file.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample-file.txt&#39;</span><span class="p">,</span> <span class="n">moder</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -771,14 +772,18 @@ This is an example of an emoji:
 
 ***
 This is an example of Bengali:
-আদিত্য মুখোপাধ্যায় টাইপ করতে পারেন - তবে নিজের নাম বানান করতে পারবেন না
-(Aditya Mukerjee can type 💩 but cannot spell his own name)
+আদিত্য মুখোপাধ্যায় পোপ টাইপ করতে পারেন তবে তাঁর নাম বানান করতে পারবেন না
+(Aditya Mukerjee can type poop but cannot spell his own name)
 ***
 
+***This is an example of Russian:
+Говорили, что на набережной появилось новое лицо: дама с собачкой.
+(It was said that a new person had appeared on the sea-front: a lady with a little dog.)
+
 ***
-This is an example of German:
-Was ist, wenn wir über deutsche Sprachen recherchieren wollen?
-(What if we want to research German languages?)
+This is an example of Chinese:
+如果我们想学习中文短篇小说怎么办？
+(What if we want to study Chinese short stories?)
 ***
 </pre></div>
 </div>
@@ -805,14 +810,18 @@ This is an example of an emoji:
 
 ***
 This is an example of Bengali:
-à¦à¦¦à¦¿à¦¤à§à¦¯ à¦®à§à¦à§à¦ªà¦¾à¦§à§à¦¯à¦¾à¦¯à¦¼ à¦à¦¾à¦à¦ª à¦à¦°à¦¤à§ à¦ªà¦¾à¦°à§à¦¨ - à¦¤à¦¬à§ à¦¨à¦¿à¦à§à¦° à¦¨à¦¾à¦® à¦¬à¦¾à¦¨à¦¾à¦¨ à¦à¦°à¦¤à§ à¦ªà¦¾à¦°à¦¬à§à¦¨ à¦¨à¦¾
-(Aditya Mukerjee can type ð© but cannot spell his own name)
+à¦à¦¦à¦¿à¦¤à§à¦¯ à¦®à§à¦à§à¦ªà¦¾à¦§à§à¦¯à¦¾à¦¯à¦¼ à¦ªà§à¦ª à¦à¦¾à¦à¦ª à¦à¦°à¦¤à§ à¦ªà¦¾à¦°à§à¦¨ à¦¤à¦¬à§ à¦¤à¦¾à¦à¦° à¦¨à¦¾à¦® à¦¬à¦¾à¦¨à¦¾à¦¨ à¦à¦°à¦¤à§ à¦ªà¦¾à¦°à¦¬à§à¦¨ à¦¨à¦¾
+(Aditya Mukerjee can type poop but cannot spell his own name)
 ***
 
+***This is an example of Russian:
+ÐÐ¾Ð²Ð¾ÑÐ¸Ð»Ð¸, ÑÑÐ¾ Ð½Ð° Ð½Ð°Ð±ÐµÑÐµÐ¶Ð½Ð¾Ð¹ Ð¿Ð¾ÑÐ²Ð¸Ð»Ð¾ÑÑ Ð½Ð¾Ð²Ð¾Ðµ Ð»Ð¸ÑÐ¾: Ð´Ð°Ð¼Ð° Ñ ÑÐ¾Ð±Ð°ÑÐºÐ¾Ð¹.
+(It was said that a new person had appeared on the sea-front: a lady with a little dog.)
+
 ***
-This is an example of German:
-Was ist, wenn wir Ã¼ber deutsche Sprachen recherchieren wollen?
-(What if we want to research German languages?)
+This is an example of Chinese:
+å¦ææä»¬æ³å­¦ä¹ ä¸­æç­ç¯å°è¯´æä¹åï¼
+(What if we want to study Chinese short stories?)
 ***
 </pre></div>
 </div>
@@ -868,14 +877,18 @@ This is an example of an emoji:
 
 ***
 This is an example of Bengali:
-à¦à¦¦à¦¿à¦¤à§à¦¯ à¦®à§à¦à§à¦ªà¦¾à¦§à§à¦¯à¦¾à¦¯à¦¼ à¦à¦¾à¦à¦ª à¦à¦°à¦¤à§ à¦ªà¦¾à¦°à§à¦¨ - à¦¤à¦¬à§ à¦¨à¦¿à¦à§à¦° à¦¨à¦¾à¦® à¦¬à¦¾à¦¨à¦¾à¦¨ à¦à¦°à¦¤à§ à¦ªà¦¾à¦°à¦¬à§à¦¨ à¦¨à¦¾
-(Aditya Mukerjee can type ð© but cannot spell his own name)
+à¦à¦¦à¦¿à¦¤à§à¦¯ à¦®à§à¦à§à¦ªà¦¾à¦§à§à¦¯à¦¾à¦¯à¦¼ à¦ªà§à¦ª à¦à¦¾à¦à¦ª à¦à¦°à¦¤à§ à¦ªà¦¾à¦°à§à¦¨ à¦¤à¦¬à§ à¦¤à¦¾à¦à¦° à¦¨à¦¾à¦® à¦¬à¦¾à¦¨à¦¾à¦¨ à¦à¦°à¦¤à§ à¦ªà¦¾à¦°à¦¬à§à¦¨ à¦¨à¦¾
+(Aditya Mukerjee can type poop but cannot spell his own name)
 ***
 
+***This is an example of Russian:
+ÐÐ¾Ð²Ð¾ÑÐ¸Ð»Ð¸, ÑÑÐ¾ Ð½Ð° Ð½Ð°Ð±ÐµÑÐµÐ¶Ð½Ð¾Ð¹ Ð¿Ð¾ÑÐ²Ð¸Ð»Ð¾ÑÑ Ð½Ð¾Ð²Ð¾Ðµ Ð»Ð¸ÑÐ¾: Ð´Ð°Ð¼Ð° Ñ ÑÐ¾Ð±Ð°ÑÐºÐ¾Ð¹.
+(It was said that a new person had appeared on the sea-front: a lady with a little dog.)
+
 ***
-This is an example of German:
-Was ist, wenn wir Ã¼ber deutsche Sprachen recherchieren wollen?
-(What if we want to research German languages?)
+This is an example of Chinese:
+å¦ææä»¬æ³å­¦ä¹ ä¸­æç­ç¯å°è¯´æä¹åï¼
+(What if we want to study Chinese short stories?)
 ***
 </pre></div>
 </div>
